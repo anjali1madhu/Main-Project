@@ -76,7 +76,7 @@ const ClientDashboard = () => {
       <div className="main-content">
         <header>
           <div>
-          <h1>Welcome, {user?.name ||"Philip"}</h1>
+          <h1>Welcome, {user?.name ||"Client"}</h1>
           <p>Your one-stop shop for premium products!</p>
           </div>
         </header>
