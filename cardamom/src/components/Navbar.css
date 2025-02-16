@@ -1,0 +1,164 @@
+/* NAVBAR STYLING */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background: rgba(15, 15, 15, 0.8); /* Glassmorphism effect */
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Logo */
+.navbar-logo .logo {
+  font-size: 1.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #00ffcc; /* Neon cyan to match the homepage theme */
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-logo .logo:hover {
+  color: #ff0080; /* Neon pink */
+}
+
+/* Navbar Links */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-link {
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  transition: color 0.3s ease-in-out, transform 0.3s ease;
+  position: relative;
+}
+
+/* Hover Effects - Neon Glow */
+.navbar-link:hover {
+  color: #00ffcc;
+  transform: translateY(-2px);
+}
+
+/* Underline Effect */
+.navbar-link::after {
+  content: '';
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, #00ffcc, #ff0080);
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.navbar-link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Login Button Styling */
+.navbar-login-button {
+  background-color: #ff0080; /* Neon pink */
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-login-button:hover {
+  background-color: #00ffcc; /* Neon cyan */
+  transform: translateY(-2px);
+}
+
+/* Logout Button Styling */
+.navbar-logout-button {
+  background-color: #ff0080; /* Neon pink */
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block;
+}
+
+.navbar-logout-button:hover {
+  background-color: #00ffcc; /* Neon cyan */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 255, 204, 0.3); /* Elegant hover shadow effect */
+}
+
+/* Adjust visibility if needed */
+.navbar-logout-button.visible {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.navbar-logout-button.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* Navbar Sticky Scroll Effect */
+.navbar.scrolled {
+  background: rgba(10, 10, 10, 0.9); /* Darker when scrolled */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .navbar {
+      padding: 1rem 3%;
+  }
+
+  .navbar-links {
+      gap: 1rem;
+  }
+
+  .navbar-link {
+      font-size: 1rem;
+  }
+
+  .navbar-login-button,
+  .navbar-logout-button {
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+  }
+}
+
+/* Smooth Fade-In Animation */
+@keyframes navbarFadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.navbar {
+  animation: navbarFadeIn 1s ease-out;
+}

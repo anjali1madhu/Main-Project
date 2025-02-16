@@ -1,0 +1,239 @@
+/* Global Styles */
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #eef1f7;
+  color: #2c3e50;
+  overflow-x: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+/* Sidebar Styles */
+.dashboard-sidebar {
+  width: 280px;
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  color: white;
+  padding: 30px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 4px 0 12px rgba(0, 0, 0, 0.1);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.dashboard-sidebar h2 {
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #ecf0f1;
+}
+
+.dashboard-sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.dashboard-sidebar ul li {
+  padding: 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.dashboard-sidebar ul li.active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.dashboard-sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  font-weight: 500;
+}
+
+.dashboard-sidebar ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.dashboard-logout-btn {
+  background-color: #e74c3c;
+  color: white;
+  padding: 14px 22px;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  cursor: pointer;
+  margin-top: 30px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.dashboard-logout-btn:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+}
+
+/* Main Content Styles */
+.dashboard-main-content {
+  flex-grow: 1;
+  width: 100%;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1e3c72;
+}
+
+header p {
+  font-size: 16px;
+  color: #7f8c8d;
+}
+
+/* Featured Products */
+.dashboard-featured-products {
+  margin-bottom: 50px;
+  animation: fadeIn 1s ease-in-out;
+  justify-content: center;
+}
+
+.dashboard-featured-products h2 {
+  text-align: center;
+  font-size: 26px;
+  color: #1e3c72;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.dashboard-product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10%;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.dashboard-product-card {
+  background: linear-gradient(135deg, #f4f4f9, #ffffff);
+  border-radius: 12px;
+  padding: 20px;
+  width: 240px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.dashboard-product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-product-image {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  transition: transform 0.3s ease;
+}
+
+.dashboard-product-image:hover {
+  transform: scale(1.05);
+}
+
+.dashboard-product-card h3 {
+  margin-top: 12px;
+  font-size: 20px;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.dashboard-product-card p {
+  font-size: 14px;
+  color: #7f8c8d;
+}
+
+.dashboard-add-to-cart-btn {
+  background-color: #27ae60;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.dashboard-add-to-cart-btn:hover {
+  background-color: #2ecc71;
+  transform: scale(1.05);
+}
+
+/* Call to Action Button */
+.dashboard-cta-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.dashboard-shop-now-btn {
+  background-color: #3498db;
+  color: white;
+  padding: 14px 28px;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  position: relative;
+  right: 50%;
+}
+
+.dashboard-shop-now-btn:hover {
+  background-color: #2980b9;
+  transform: translateY(-5px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

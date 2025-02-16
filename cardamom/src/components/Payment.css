@@ -1,0 +1,88 @@
+.payment-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(to bottom, #F7F9F7, #A8D5BA); /* Similar gradient as Login */
+  font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  color: #2A5934;
+  margin-bottom: 1rem;
+}
+
+.payment-methods {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.payment-method-btn {
+  padding: 0.8rem 2rem;
+  background-color: #fff;
+  color: #5A945A;
+  border: 2px solid #5A945A;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.payment-method-btn.active,
+.payment-method-btn:hover {
+  background-color: #5A945A;
+  color: #fff;
+}
+
+.payment-form {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 450px;
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  font-weight: bold;
+  color: #5A945A;
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+  display: block;
+}
+
+input {
+  width: 100%;
+  padding: 1rem;
+  margin: 0.5rem 0 1rem 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+button.pay-now-btn {
+  width: 100%;
+  padding: 1rem;
+  color: #fff;
+  background-color: #5A945A;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+button.pay-now-btn:hover {
+  background-color: #2A5934;
+}

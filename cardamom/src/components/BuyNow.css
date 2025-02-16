@@ -1,0 +1,81 @@
+/* BuyNow.css */
+
+.buy-now-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .product-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+  }
+  
+  .product-details img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .product-details h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #444;
+  }
+  
+  .product-details p {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  .purchase-btn {
+    margin-top: 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .purchase-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+  }
+  
+  .purchase-btn:active {
+    transform: scale(1);
+  }
+  
+  @media (max-width: 768px) {
+    .product-details {
+      width: 90%;
+    }
+  
+    h2 {
+      font-size: 1.8rem;
+    }
+  }
+  
